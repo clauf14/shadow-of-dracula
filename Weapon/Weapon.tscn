@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2qyco34jpab3"]
+
+[ext_resource type="Script" path="res://Weapon/Weapon.gd" id="1_qvwxr"]
+[ext_resource type="PackedScene" uid="uid://3xbxw662bcfh" path="res://Models/Sword.dae" id="2_fp8ug"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0vmsv"]
+
+[sub_resource type="Animation" id="3"]
+resource_name = "attack"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.2, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-30, 0, 0), Vector3(60, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ss6dr"]
+_data = {
+"attack": SubResource("3")
+}
+
+[node name="Weapon" type="Node3D"]
+script = ExtResource("1_qvwxr")
+
+[node name="Sword" parent="." instance=ExtResource("2_fp8ug")]
+transform = Transform3D(-1.72803e-08, 1.72803e-08, 0.15, 0.106066, 0.106066, 0, -0.106066, 0.106066, -2.44381e-08, 0, 0, 0)
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Sword"]
+transform = Transform3D(-1.96019e-07, 4.58566, 0.829295, 1.96019e-07, -0.319216, 11.9132, 1.70152, 5.65052e-07, -1.27689e-06, 0.141836, 3.89748, -4.32658e-07)
+shape = SubResource("BoxShape3D_0vmsv")
+target_position = Vector3(0, 0, 0)
+
+[node name="AnimatonPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ss6dr")
+}

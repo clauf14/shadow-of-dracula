@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://7j5o42kibii"]
+
+[ext_resource type="Script" path="res://Enemy/Enemy.gd" id="1_wm4sp"]
+[ext_resource type="PackedScene" uid="uid://c2qyco34jpab3" path="res://Weapon/Weapon.tscn" id="2_ite8d"]
+
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="2"]
+material = SubResource("1")
+
+[sub_resource type="CapsuleShape3D" id="3"]
+radius = 0.625706
+height = 2.18194
+
+[node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("1_wm4sp")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("2")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("3")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Weapon" parent="." instance=ExtResource("2_ite8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.545569, 0.885264, 0.257421)
+
+[connection signal="timeout" from="Timer" to="." method="on_timeout"]

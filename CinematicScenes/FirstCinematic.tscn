@@ -1,0 +1,122 @@
+[gd_scene load_steps=11 format=3 uid="uid://clfgq4bq7ec1h"]
+
+[ext_resource type="Script" path="res://CinematicScenes/camera_settings.gd" id="1_mvq8k"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0bvjb"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_26d42"]
+sky_material = SubResource("ProceduralSkyMaterial_0bvjb")
+
+[sub_resource type="Environment" id="Environment_rur1b"]
+background_mode = 2
+sky = SubResource("Sky_26d42")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2o7r8"]
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4l3bf"]
+normal_scale = 16.0
+rim_tint = 0.0
+anisotropy = 1.0
+heightmap_scale = 2.539
+backlight = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n6ns0"]
+material = SubResource("StandardMaterial3D_4l3bf")
+height = 1.8
+
+[sub_resource type="Animation" id="Animation_6xep8"]
+resource_name = "scene"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraSettings/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.628, 1.265, 5.424), Vector3(-1.053, 1.33, 1.694)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraSettings/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.06667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.233874, -0.520108, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hy6ql"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraSettings/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.628, 1.265, 5.424)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraSettings/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.233874, -0.520108, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6hi2w"]
+_data = {
+"RESET": SubResource("Animation_hy6ql"),
+"scene": SubResource("Animation_6xep8")
+}
+
+[node name="FirstCinematic" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rur1b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.983885, 0.154847, -0.0894011, 0, 0.5, 0.866025, 0.178802, 0.852069, -0.491942, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_2o7r8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0847108, 0.956884, -0.0443591)
+mesh = SubResource("CapsuleMesh_n6ns0")
+
+[node name="CameraSettings" type="Node3D" parent="."]
+script = ExtResource("1_mvq8k")
+
+[node name="Camera3D" type="Camera3D" parent="CameraSettings"]
+transform = Transform3D(0.867765, 0.115173, -0.483444, 0, 0.972776, 0.231748, 0.496974, -0.201103, 0.844141, -2.628, 1.265, 5.424)
+near = 0.567
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraSettings"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_6hi2w")
+}
+
+[connection signal="animation_finished" from="CameraSettings/AnimationPlayer" to="CameraSettings" method="_on_animation_player_animation_finished"]

@@ -8,6 +8,8 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CapsuleMesh" id="2"]
 material = SubResource("1")
+radius = 0.4
+height = 1.8
 
 [sub_resource type="CapsuleShape3D" id="3"]
 radius = 0.625706
@@ -27,6 +29,6 @@ shape = SubResource("3")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Weapon" parent="." instance=ExtResource("2_ite8d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.545569, 0.885264, 0.257421)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.385297, 0.842737, 0.190336)
 
 [connection signal="timeout" from="Timer" to="." method="on_timeout"]

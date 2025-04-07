@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://j8jmeraklc2f" path="res://UI/UI.tscn" id="4_lpw5w"]
 
 [sub_resource type="CapsuleMesh" id="1"]
+radius = 0.4
+height = 1.8
 
 [sub_resource type="CapsuleShape3D" id="2"]
 radius = 0.571708
@@ -31,7 +33,7 @@ transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -1, 1,
 current = true
 
 [node name="Weapon" parent="." instance=ExtResource("3_orjtd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61726, 0.843231, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.465817, 0.851522, -0.0808463)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

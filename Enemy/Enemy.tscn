@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c2qyco34jpab3" path="res://Weapon/Weapon.tscn" id="2_ite8d"]
 
 [sub_resource type="StandardMaterial3D" id="1"]
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(1, 0, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="2"]
 material = SubResource("1")

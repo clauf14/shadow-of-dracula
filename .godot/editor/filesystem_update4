@@ -1,0 +1,9 @@
+res://HomeScene/HomeScene.gd
+res://Scenes/MainScene.tscn
+res://GoldCoin/GoldCoin.tscn
+res://UI/UI.tscn
+res://HomeScene/HomeScene.tscn
+res://LoadGameScene/LoadGameScene.tscn
+res://CinematicScenes/FirstCinematic.tscn
+res://Player/Player.tscn
+res://Enemy/Enemy.tscn

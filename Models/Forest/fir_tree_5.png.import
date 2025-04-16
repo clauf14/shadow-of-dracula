@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvir0tguhr2me"
+uid="uid://b6sgi15ovcoh4"
 path.s3tc="res://.godot/imported/fir_tree_5.png-6f7362ef4f97a6a6f3576a6fac301cca.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "57758f080cd36047d072e94ea23e008e"
 }
 
 [deps]
@@ -28,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/fir_tree_5.png"
+roughness/src_normal="res://Models/Forest/fir_tree_5.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

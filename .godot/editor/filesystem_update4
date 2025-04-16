@@ -1,13 +1,11 @@
-res://CinematicScenes/FirstCinematic.tscn
-res://new_terrain_3d_material.tres
-res://new_terrain_3d_assets.tres
+res://psx_modular_castle.tscn
 res://demo/data/assets.tres
-res://CinematicScenes/camera_settings.gd
 res://Scenes/MainScene.tscn
 res://GoldCoin/GoldCoin.tscn
 res://UI/UI.tscn
 res://HomeScene/HomeScene.tscn
 res://LoadGameScene/LoadGameScene.tscn
+res://CinematicScenes/FirstCinematic.tscn
 res://Player/Player.tscn
 res://Enemy/Enemy.tscn
 res://demo/Demo.tscn

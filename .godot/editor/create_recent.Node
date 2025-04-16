@@ -1,3 +1,5 @@
+StaticBody3D
+CollisionShape3D
 Node3D
 Terrain3D
 AnimationPlayer
@@ -10,4 +12,3 @@ Label
 Control
 CanvasLayer
 ShapeCast3D
-ProgressBar

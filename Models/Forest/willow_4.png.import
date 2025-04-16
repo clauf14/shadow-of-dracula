@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfumiemrl5nnm"
+uid="uid://u05uto3nl7vg"
 path.s3tc="res://.godot/imported/willow_4.png-2626467fe1abaafee5111549cb2732c4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "b70bc90400e983069d14d1e66761ca6e"
 }
 
 [deps]
@@ -28,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/willow_4.png"
+roughness/src_normal="res://Models/Forest/willow_4.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

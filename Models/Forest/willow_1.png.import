@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6aigx2j8ocij"
+uid="uid://c6updw2pbybhn"
 path.s3tc="res://.godot/imported/willow_1.png-2a96f942e92291b6b8eabcffe03c4b4b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "0ca602045d9edd601adf0ce718ab8200"
 }
 
 [deps]

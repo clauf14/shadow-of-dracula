@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6v7wadayesmk"
+uid="uid://s3svelteehjc"
 path.s3tc="res://.godot/imported/PSX_Modular_Castle_temple&towers512x512.jpg-a6a0db349e8f71ef6c2240f4b11eae5b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "80dffa75343f553d37cb8f684069c6e3"
 }
 
 [deps]

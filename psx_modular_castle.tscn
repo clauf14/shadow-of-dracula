@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://uuyaulm8t274"]
+[gd_scene load_steps=53 format=4 uid="uid://uuyaulm8t274"]
 
 [ext_resource type="PackedScene" uid="uid://gl2cws5nm7lv" path="res://demo/PSX_Modular_Castle.glb" id="1_aqjmw"]
 [ext_resource type="Texture2D" uid="uid://dskcbx6ddkjao" path="res://demo/PSX_Modular_Castle_walls&defensivetowers256x256.jpg" id="2_cp3gi"]
@@ -521,6 +521,9 @@ size = Vector3(2.13989, 0.141113, 3.38611)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lyqgv"]
 size = Vector3(4.39362, 1, 0.503967)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0nvu7"]
+size = Vector3(0.0851746, 2.89667, 0.656616)
+
 [node name="PSX_Modular_Castle" instance=ExtResource("1_aqjmw")]
 
 [node name="Wall" parent="." index="0"]
@@ -957,3 +960,7 @@ shape = SubResource("BoxShape3D_lyqgv")
 [node name="CollisionShape3D42" type="CollisionShape3D" parent="CollisionBodies" index="41"]
 transform = Transform3D(0.00324626, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.00324626, -25.5533, 6.74452, -31.1242)
 shape = SubResource("BoxShape3D_lyqgv")
+
+[node name="CollisionShape3D43" type="CollisionShape3D" parent="CollisionBodies" index="42"]
+transform = Transform3D(0.958183, -0.286157, 0, 0.286157, 0.958183, 0, 0, 0, 1, -22.9175, 5.33184, -32.1374)
+shape = SubResource("BoxShape3D_0nvu7")

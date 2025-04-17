@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv5jol5eg10hu"
+uid="uid://dpg1rgu52m4fi"
 path.s3tc="res://.godot/imported/daisies_7.png-7fd89da88851c13e50d4f8386b5e4cd8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "4cf9a98d9177d28c1cbd426d1bc424d8"
 }
 
 [deps]

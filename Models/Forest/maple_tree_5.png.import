@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uiej6np6ek4x"
+uid="uid://ds5q2vkup37ay"
 path.s3tc="res://.godot/imported/maple_tree_5.png-11c7a8aba61510ae676f1d4f9512e8cb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "efd018448eb86ef505bbe069f6d65c31"
 }
 
 [deps]
@@ -28,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/maple_tree_5.png"
+roughness/src_normal="res://Models/Forest/maple_tree_5.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

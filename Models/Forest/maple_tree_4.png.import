@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq0sfbejef4ea"
+uid="uid://ev3kqvna2dy4"
 path.s3tc="res://.godot/imported/maple_tree_4.png-4b19bc1d66415e8ef11e6afb4a5ce9fc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "23b72a0a0aeeb9101412b74a47aa0a64"
 }
 
 [deps]

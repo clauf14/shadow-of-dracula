@@ -1,4 +1,5 @@
 CollisionShape3D
+CharacterBody3D
 StaticBody3D
 Node3D
 Terrain3D
@@ -11,4 +12,3 @@ Panel
 Label
 Control
 CanvasLayer
-ShapeCast3D

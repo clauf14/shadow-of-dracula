@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://domhm87hbhbg1"]
 
-[ext_resource type="Script" uid="uid://comtri33yj8p5" path="res://demo/src/Player.gd" id="1_nm1yx"]
-[ext_resource type="Script" uid="uid://3hik3db0x4h6" path="res://demo/src/CameraManager.gd" id="2_loos7"]
+[ext_resource type="Script" path="res://demo/src/Player.gd" id="1_nm1yx"]
+[ext_resource type="Script" path="res://demo/src/CameraManager.gd" id="2_loos7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
 
@@ -36,8 +36,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
 shape = SubResource("CapsuleShape3D_lwhhq")
 
 [node name="CollisionShapeRay" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.00578308, 1.00626, 0.00662363)
 shape = SubResource("SeparationRayShape3D_twc2s")
+disabled = true
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

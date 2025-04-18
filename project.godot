@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rise of The Fallen Kingdom"
-run/main_scene="res://HomeScene/HomeScene.tscn"
+run/main_scene="res://demo/Demo.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 

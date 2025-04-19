@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://chol2xlfbq7cu"]
+[gd_scene load_steps=25 format=3 uid="uid://chol2xlfbq7cu"]
 
 [ext_resource type="Script" path="res://demo/src/DemoScene.gd" id="1_k7qca"]
 [ext_resource type="PackedScene" uid="uid://d2jihfohphuue" path="res://demo/components/UI.tscn" id="2_nqak5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bwwihbso5wrk3" path="res://Models/Forest/willow.glb" id="10_6iel4"]
 [ext_resource type="PackedScene" uid="uid://cmvkfchtis3sx" path="res://Models/Forest/daisies.glb" id="11_fg47j"]
 [ext_resource type="PackedScene" uid="uid://uuyaulm8t274" path="res://psx_modular_castle.tscn" id="12_47hv7"]
+[ext_resource type="PackedScene" uid="uid://dfqxlc72yruln" path="res://PauseMenu/pause_menu.tscn" id="13_81b0d"]
 [ext_resource type="PackedScene" uid="uid://ccyngebgch5oh" path="res://Characters/knight.tscn" id="13_fnops"]
 
 [sub_resource type="Gradient" id="Gradient_vr1m7"]
@@ -1171,3 +1172,7 @@ transform = Transform3D(-2.91774e-07, 0, 6.675, 0, 6.675, 0, -6.675, 0, -2.91774
 
 [node name="Knight" parent="." instance=ExtResource("13_fnops")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 59.6862, -9.34771, -169.636)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_81b0d")]

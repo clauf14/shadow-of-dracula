@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfqxlc72yruln"]
+
+[ext_resource type="Script" path="res://PauseMenu/pause_menu.gd" id="1_ca7tt"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ca7tt")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 121.0
+offset_right = 789.0
+offset_bottom = 519.0
+
+[node name="Control" type="Control" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="PanelContainer/Control"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 50.0
+offset_right = 376.0
+offset_bottom = 108.0
+text = "Resume"
+
+[node name="Save game" type="Button" parent="PanelContainer/Control"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 187.0
+offset_right = 375.0
+offset_bottom = 251.0
+text = "Save game"
+
+[node name="Quit" type="Button" parent="PanelContainer/Control"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 293.0
+offset_right = 379.0
+offset_bottom = 354.0
+text = "Quit"
+
+[connection signal="pressed" from="PanelContainer/Control/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="PanelContainer/Control/Save game" to="." method="_on_save_game_pressed"]
+[connection signal="pressed" from="PanelContainer/Control/Quit" to="." method="_on_quit_pressed"]

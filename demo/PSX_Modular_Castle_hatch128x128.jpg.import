@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://si8iix0xgmcc"
+uid="uid://d2r6o0jt3umtf"
 path.s3tc="res://.godot/imported/PSX_Modular_Castle_hatch128x128.jpg-c998cd9389b5993b89fd35589133df24.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "84ed958e69a3c99717a753db7cf15494"
 }
 
 [deps]

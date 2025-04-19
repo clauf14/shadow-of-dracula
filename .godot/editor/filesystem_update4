@@ -1,12 +1,4 @@
 res://demo/data/assets.tres
+res://PauseMenu/pause_menu.tscn
+res://PauseMenu/pause_menu.gd
 res://demo/Demo.tscn
-res://Characters/knight.gd
-res://Scenes/MainScene.tscn
-res://GoldCoin/GoldCoin.tscn
-res://UI/UI.tscn
-res://HomeScene/HomeScene.tscn
-res://LoadGameScene/LoadGameScene.tscn
-res://CinematicScenes/FirstCinematic.tscn
-res://Enemy/Enemy.tscn
-res://psx_modular_castle.tscn
-res://Characters/knight.tscn

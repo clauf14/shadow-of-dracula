@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var MOVE_SPEED: float = 20.0
-@export var JUMP_SPEED: float = 2.0
+@export var JUMP_SPEED: float = 30.0
 @export var first_person: bool = false : 
 	set(p_value):
 		first_person = p_value
@@ -29,6 +29,7 @@ var current_anim: String = ""
 var is_interacting: bool = false
 var is_attacking: bool = false
 var is_blocking: bool = false
+var is_jumping: bool = false
 
 func _ready() -> void:
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
@@ -66,34 +67,43 @@ func get_camera_relative_input() -> Vector3:
 
 	if Input.is_key_pressed(KEY_A):
 		input_dir -= %Camera3D.global_transform.basis.x
-		play_anim("Running_Strafe_Left" if shift_pressed else "Walking_A")
+		if not is_jumping:
+			play_anim("Running_Strafe_Left" if shift_pressed else "Walking_A")
 		is_moving = true
 
 	elif Input.is_key_pressed(KEY_D):
 		input_dir += %Camera3D.global_transform.basis.x
-		play_anim("Running_Strafe_Right" if shift_pressed else "Walking_A")
+		if not is_jumping:
+			play_anim("Running_Strafe_Right" if shift_pressed else "Walking_A")
 		is_moving = true
 
 	elif Input.is_key_pressed(KEY_W):
 		input_dir -= %Camera3D.global_transform.basis.z
-		play_anim("Running_A" if shift_pressed else "Walking_A")
+		if not is_jumping:
+			play_anim("Running_A" if shift_pressed else "Walking_A")
 		is_moving = true
 
 	elif Input.is_key_pressed(KEY_S):
 		input_dir += %Camera3D.global_transform.basis.z
-		play_anim("Walking_Backwards")
+		if not is_jumping:
+			play_anim("Walking_Backwards")
 		is_moving = true
 
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_key_pressed(KEY_SPACE) and not is_jumping:
 		velocity.y += JUMP_SPEED + MOVE_SPEED * 0.016
+		is_jumping = true
+		play_anim("Jump_Full_Short")
+
 	if Input.is_key_pressed(KEY_Q):
 		velocity.y -= JUMP_SPEED + MOVE_SPEED * 0.016
+
 	if Input.is_key_pressed(KEY_KP_ADD) or Input.is_key_pressed(KEY_EQUAL):
 		MOVE_SPEED = clamp(MOVE_SPEED + 0.5, 5, 9999)
+
 	if Input.is_key_pressed(KEY_KP_SUBTRACT) or Input.is_key_pressed(KEY_MINUS):
 		MOVE_SPEED = clamp(MOVE_SPEED - 0.5, 5, 9999)
 
-	if not is_moving:
+	if not is_moving and not is_jumping:
 		play_anim("Idle")
 
 	return input_dir
@@ -134,3 +144,5 @@ func _on_animation_finished(anim_name: String) -> void:
 		is_attacking = false
 	elif anim_name == "Block":
 		is_blocking = false
+	elif anim_name == "Jump_Full_Short":
+		is_jumping = false

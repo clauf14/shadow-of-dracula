@@ -1,4 +1,4 @@
 res://demo/data/assets.tres
-res://PauseMenu/pause_menu.tscn
-res://PauseMenu/pause_menu.gd
 res://demo/Demo.tscn
+res://demo/princess_zone.gd
+res://UI/UI.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://uuyaulm8t274"]
+[gd_scene load_steps=54 format=4 uid="uid://uuyaulm8t274"]
 
 [ext_resource type="PackedScene" uid="uid://gl2cws5nm7lv" path="res://demo/PSX_Modular_Castle.glb" id="1_aqjmw"]
 [ext_resource type="Texture2D" uid="uid://dskcbx6ddkjao" path="res://demo/PSX_Modular_Castle_walls&defensivetowers256x256.jpg" id="2_cp3gi"]
@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://s3svelteehjc" path="res://demo/PSX_Modular_Castle_temple&towers512x512.jpg" id="3_sqn13"]
 [ext_resource type="Texture2D" uid="uid://b1jrhj84nl4sx" path="res://demo/PSX_Modular_Castle_rope128x128.jpg" id="4_lc43g"]
 [ext_resource type="Texture2D" uid="uid://cfcjq7q4rxf4h" path="res://demo/PSX_Modular_Castle_Metal128x128.jpg" id="4_yg8b0"]
-[ext_resource type="Texture2D" uid="uid://c5qwxlmhfpa0n" path="res://demo/PSX_Modular_Castle_Door256x256.jpg" id="5_tvexa"]
+[ext_resource type="Texture2D" uid="uid://hvbgvoo03b46" path="res://demo/PSX_Modular_Castle_Door256x256.jpg" id="5_tvexa"]
 [ext_resource type="Texture2D" uid="uid://clm1qgmnp44vb" path="res://demo/PSX_Modular_Castle_well128x128.jpg" id="5_w5y4g"]
 [ext_resource type="Texture2D" uid="uid://cgc3hagrdr8ur" path="res://demo/PSX_Modular_Castle_wellbottom128x128.jpg" id="6_84a0d"]
-[ext_resource type="Texture2D" uid="uid://si8iix0xgmcc" path="res://demo/PSX_Modular_Castle_hatch128x128.jpg" id="6_xa74q"]
+[ext_resource type="Texture2D" uid="uid://d2r6o0jt3umtf" path="res://demo/PSX_Modular_Castle_hatch128x128.jpg" id="6_xa74q"]
+[ext_resource type="PackedScene" uid="uid://coha1ico7cjx5" path="res://addons/kaykit_character_pack_adventures/Characters/gltf/Rogue.glb" id="11_0gft7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymvhj"]
 resource_name = "walls&defensivetowers2"
@@ -964,3 +965,6 @@ shape = SubResource("BoxShape3D_lyqgv")
 [node name="CollisionShape3D43" type="CollisionShape3D" parent="CollisionBodies" index="42"]
 transform = Transform3D(0.958183, -0.286157, 0, 0.286157, 0.958183, 0, 0, 0, 1, -22.9175, 5.33184, -32.1374)
 shape = SubResource("BoxShape3D_0nvu7")
+
+[node name="Princess" parent="." index="59" instance=ExtResource("11_0gft7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, -3, -35)

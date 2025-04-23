@@ -564,7 +564,7 @@ size = Vector3(4.39362, 1, 0.503967)
 size = Vector3(0.0851746, 2.89667, 0.656616)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_et4dm"]
-size = Vector3(0.981567, 0.430603, 0.625488)
+size = Vector3(0.987366, 0.872032, 0.64856)
 
 [node name="PSX_Modular_Castle" instance=ExtResource("1_aqjmw")]
 
@@ -798,7 +798,7 @@ transform = Transform3D(-1.685, 0, -2.54428e-07, 0, 1.955, 0, 2.54428e-07, 0, -1
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -54.8678, 1.51019, -43.4009)
 
 [node name="Stairs3" type="MeshInstance3D" parent="." index="49"]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -34.8678, 3.51019, -37.4009)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -34.8678, 3.59854, -37.5478)
 mesh = SubResource("ArrayMesh_emsaj")
 skeleton = NodePath("")
 
@@ -1013,5 +1013,5 @@ transform = Transform3D(0.958183, -0.286157, 0, 0.286157, 0.958183, 0, 0, 0, 1, 
 shape = SubResource("BoxShape3D_0nvu7")
 
 [node name="CollisionShape3D44" type="CollisionShape3D" parent="CollisionBodies" index="43"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09694, 5.7153, -21.3303)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09984, 5.5766, -21.428)
 shape = SubResource("BoxShape3D_et4dm")

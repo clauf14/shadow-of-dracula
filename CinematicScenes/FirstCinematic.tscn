@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://clfgq4bq7ec1h"]
 
-[ext_resource type="Script" path="res://CinematicScenes/camera_settings.gd" id="1_mvq8k"]
+[ext_resource type="Script" uid="uid://b8kidipl4eb8g" path="res://CinematicScenes/camera_settings.gd" id="1_mvq8k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0bvjb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -38,10 +38,10 @@ tracks/0/path = NodePath("CameraSettings/Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2.96),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-2.618, 1.73, 5.394), Vector3(-0.848, 1.395, 1.434)]
+"values": [Vector3(355.896, 247.688, -1596.15), Vector3(288.517, 250.713, -1640.81)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -50,10 +50,10 @@ tracks/1/path = NodePath("CameraSettings/Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 2.96),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.233874, -0.502655, 0)]
+"values": [Vector3(-0.233874, 0.736703, -6.71171e-09), Vector3(-0.521853, 0.736529, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -62,10 +62,10 @@ tracks/2/path = NodePath("CameraSettings/Camera3D:fov")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2.96),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [75.0, 99.9]
+"values": [75.0, 68.7]
 }
 
 [sub_resource type="Animation" id="Animation_6xep8"]
@@ -98,8 +98,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6hi2w"]
 _data = {
-"RESET": SubResource("Animation_hy6ql"),
-"scene": SubResource("Animation_6xep8")
+&"RESET": SubResource("Animation_hy6ql"),
+&"scene": SubResource("Animation_6xep8")
 }
 
 [node name="FirstCinematic" type="Node3D"]
@@ -122,13 +122,13 @@ mesh = SubResource("CapsuleMesh_n6ns0")
 script = ExtResource("1_mvq8k")
 
 [node name="Camera3D" type="Camera3D" parent="CameraSettings"]
-transform = Transform3D(0.876306, 0.111645, -0.468639, 0, 0.972776, 0.231748, 0.481754, -0.203082, 0.85245, -2.618, 1.73, 5.394)
+transform = Transform3D(0.740687, -0.1557, 0.653559, -6.52899e-09, 0.972776, 0.231748, -0.671849, -0.171653, 0.720523, 355.896, 247.688, -1596.15)
 near = 0.567
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraSettings"]
 root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_6hi2w")
+&"": SubResource("AnimationLibrary_6hi2w")
 }
 
 [connection signal="animation_finished" from="CameraSettings/AnimationPlayer" to="CameraSettings" method="_on_animation_player_animation_finished"]

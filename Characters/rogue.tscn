@@ -78,3 +78,6 @@ visible = false
 
 [node name="Rogue_Cape" parent="Rig/Skeleton3D" index="5"]
 transform = Transform3D(0.996275, -5.14962e-09, 0.0862353, 5.13043e-09, 1, 4.44077e-10, -0.0862353, 1.88007e-15, 0.996275, -4.17227e-09, 1.20227, 1.52591e-15)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Cheer"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://qx75nh8o2dei"]
 
-[ext_resource type="Script" path="res://HomeScene/HomeScene.gd" id="1_61c47"]
+[ext_resource type="Script" uid="uid://y86e7ugy7h5n" path="res://HomeScene/HomeScene.gd" id="1_61c47"]
 [ext_resource type="Texture2D" uid="uid://cfhhffge2ctwb" path="res://Backgrounds/menu.png" id="2_4yfht"]
 [ext_resource type="FontFile" uid="uid://bwyo2j22ormdr" path="res://Font/OldLondon.ttf" id="3_5eei2"]
 

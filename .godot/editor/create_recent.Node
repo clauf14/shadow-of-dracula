@@ -1,11 +1,12 @@
+ColorRect
+Label
+Node3D
 CollisionShape3D
 Label3D
-Label
 Control
 Area3D
 Area2D
 MeshInstance3D
-Node3D
 CanvasLayer
 Button
 PanelContainer

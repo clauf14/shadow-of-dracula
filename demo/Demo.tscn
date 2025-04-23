@@ -1182,7 +1182,7 @@ font_size = 70
 uppercase = true
 
 [node name="Rogue" parent="PSX_Modular_Castle2" instance=ExtResource("14_88s2h")]
-transform = Transform3D(0.424243, 0, 0.0253607, 0, 0.425, 0, -0.0253607, 0, 0.424243, -34.8757, 5.01261, -36.0319)
+transform = Transform3D(-0.42478, 0, 0.0136833, 0, 0.425, 0, -0.0136833, 0, -0.42478, -35.027, 4.23212, -37.3755)
 
 [node name="Knight" parent="." instance=ExtResource("13_fnops")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 171.111, 181.185, -1812.22)

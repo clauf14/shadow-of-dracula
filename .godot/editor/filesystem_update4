@@ -1,0 +1,13 @@
+res://demo/data/assets1.tres
+res://demo/Cinematic.tscn
+res://demo/data/assets.tres
+res://demo/components/UI.tscn
+res://demo/Demo.tscn
+res://HomeScene/HomeScene.tscn
+res://demo/characters/mage.tscn
+res://demo/characters/mage1.tscn
+res://Characters/knight_cinematic.tscn
+res://Characters/rogue_hooded.tscn
+res://Characters/skeleton_minion_cinematic_run.tscn
+res://Characters/skeleton_warrior_cinematic.tscn
+res://Characters/knight_cinematic2.tscn

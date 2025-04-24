@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dbao41hvsmpeu"]
+[gd_scene load_steps=36 format=3 uid="uid://dbao41hvsmpeu"]
 
 [ext_resource type="PackedScene" uid="uid://bb2lp50sjndus" path="res://demo/components/Environment.tscn" id="3_oypso"]
 [ext_resource type="PackedScene" uid="uid://dwnhqfjq7v1pq" path="res://demo/components/Borders.tscn" id="4_lbtgp"]
@@ -16,6 +16,11 @@
 [ext_resource type="Script" uid="uid://b8kidipl4eb8g" path="res://CinematicScenes/camera_settings.gd" id="15_h16jr"]
 [ext_resource type="PackedScene" uid="uid://cwax3xkv4klfh" path="res://Characters/knight_cinematic.tscn" id="15_lbtgp"]
 [ext_resource type="FontFile" uid="uid://bwyo2j22ormdr" path="res://Font/OldLondon.ttf" id="16_oypso"]
+[ext_resource type="PackedScene" uid="uid://qgart1w1s84n" path="res://Characters/rogue_hooded.tscn" id="17_lbtgp"]
+[ext_resource type="PackedScene" uid="uid://cphcrnw5e4xnq" path="res://Characters/skeleton_minion_cinematic_run.tscn" id="18_hnlo7"]
+[ext_resource type="PackedScene" uid="uid://bn1hy1jeh0ebp" path="res://Characters/skeleton_warrior_cinematic.tscn" id="19_iw5h0"]
+[ext_resource type="PackedScene" uid="uid://cs8jk87jswiu7" path="res://Characters/knight_cinematic2.tscn" id="20_iw5h0"]
+[ext_resource type="PackedScene" uid="uid://cjyx24s6vqw02" path="res://Characters/knight_cinematic3.tscn" id="21_uvhtu"]
 
 [sub_resource type="Gradient" id="Gradient_vr1m7"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -218,6 +223,312 @@ radius = 0.0398111
 height = 12.4288
 radius = 0.313943
 
+[sub_resource type="Animation" id="Animation_6xep8"]
+resource_name = "scene"
+length = 110.0
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraSettings/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0878, 21.2737, 21.2986, 24.9667, 29.4134, 35.0258, 40.2, 42.95, 49.6167, 61.2, 63.3263, 78.5495, 85.8094, 91.4333, 97.8, 105.384),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 500, 500, 500, 500, 10, 1, 500, 500, 500, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(387.514, 223.711, -1202.33), Vector3(274.55, 223.711, -1564.02), Vector3(427.502, 277.62, -1821.06), Vector3(312.329, 192.825, -1817.93), Vector3(191.529, 192.825, -1817.93), Vector3(155.952, 224.118, -1852.12), Vector3(127.161, 218.068, -1852.93), Vector3(83.7632, 271.314, -1818.69), Vector3(135.459, 187.423, -1847.81), Vector3(751.818, 110.259, -1884.94), Vector3(570.382, 91.1187, -1908.29), Vector3(197.39, 195.002, -1778.03), Vector3(185.219, 185.448, -1830.33), Vector3(218.944, 233.865, -1800.26), Vector3(219.764, 261.83, -1794.47), Vector3(65.7202, 201.897, -1744.27), Vector3(65.7202, 214.64, -1713.43), Vector3(64.3675, 223.556, -1695), Vector3(43.5695, 243.134, -1695), Vector3(-20.9967, 221.66, -1703.85), Vector3(-24.303, -13.029, -1700.22)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraSettings/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0878, 21.2737, 21.2986, 24.9667, 29.4134, 35.0258, 40.2, 43.0055, 49.6167, 61.1167, 63.3263, 78.6333, 85.8094, 91.2, 97.8, 105.384),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 500, 500, 500, 500, 10, 1, 500, 500, 500, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.233874, 0.36357, 5.73828e-09), Vector3(-0.233874, 0.536654, 2.90938e-10), Vector3(-0.233874, 1.58408, 6.21315e-09), Vector3(-0.233874, 1.58408, 6.21315e-09), Vector3(0.165912, 1.5839, 0.00524205), Vector3(-0.019147, 1.58372, 0.00283089), Vector3(-0.0279253, 1.58301, 0.00349066), Vector3(-1.10693, -1.5566, -0.0205838), Vector3(-0.216421, -1.30202, -0.010472), Vector3(-0.0928688, 1.4982, -0.0278547), Vector3(-0.0234062, -1.3942, -0.0154145), Vector3(-0.0226893, -1.04196, -0.015708), Vector3(-0.0226893, 2.32736, -0.015708), Vector3(-0.545851, 2.08301, 0.0391563), Vector3(-0.545851, 2.08301, 0.0391563), Vector3(-0.239942, -3.08571, 0.00460581), Vector3(-0.239942, 1.87443, 0.00460581), Vector3(-0.239942, 1.24054, 0.0046058), Vector3(-1.16635, 1.32822, 0.46201), Vector3(-0.940688, -1.60029, 0.0838004), Vector3(0.404916, -1.57254, 0.0314159)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraSettings/Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0837, 16.0878, 21.2737, 21.2986, 25.0167, 29.4134, 35.0258, 40.2, 43.0055, 49.6167, 61.05, 63.3263, 78.5495, 85.8094, 91.2667, 97.8, 105.392),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 500, 500, 500, 500, 10, 1, 500, 500, 500, 1, 1, 1, 1),
+"update": 0,
+"values": [75.0, 69.6, 75.0, 75.0, 88.6, 75.0, 75.0, 84.0, 75.0, 84.9, 39.8, 25.3, 38.1, 21.1, 35.6, 16.2, 67.1, 84.1, 84.1, 96.2, 96.2, 96.2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.08333, 3.85, 9.2, 10.2667, 12.0333, 15.8833),
+"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 0.843137, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(1, 0.21268, 0.159696, 1), Color(0, 0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:theme_override_colors/font_shadow_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.08333, 3.88333, 9.15, 10.2667, 12.0667, 15.8833),
+"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:theme_override_colors/font_outline_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.08333, 3.93333, 9.15, 10.2667, 12.1167, 15.8833),
+"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.5, 9.98333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["In a distant and fictional kingdom, 
+the people gathered to celebrate the princess’s birthday...", "..but then, something unexpected changed everything."]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4.63333, 105.9, 109.133),
+"transitions": PackedFloat32Array(1, 16, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.50917),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton_Warrior:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134, 57.9424, 63.1631, 64.4683, 66.997, 71.942, 77.1627, 78.4679, 80.5072, 80.7519, 82.3834, 85.8094, 89.2355),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(688.878, 87.3504, -1913.48), Vector3(618.333, 87.3504, -1920.68), Vector3(560.746, 87.3504, -1913.56), Vector3(281.036, 180.927, -1818.51), Vector3(279.978, 180.927, -1822.97), Vector3(201.683, 180.927, -1818.51), Vector3(151.408, 180.927, -1760.12), Vector3(104.233, 180.927, -1721.82), Vector3(89.9813, 180.927, -1721.82), Vector3(80.6877, 180.927, -1721.82), Vector3(70.2154, 193.525, -1721.82), Vector3(62.9039, 200.996, -1721.82), Vector3(55.982, 200.996, -1721.82), Vector3(54.5683, 200.996, -1719.22), Vector3(54.5683, 200.996, -1713.1), Vector3(48.5785, 200.996, -1712.29), Vector3(48.5786, 216.657, -1705.69), Vector3(48.5786, 216.657, -1702.31)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton_Warrior:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134, 57.9424, 63.1631, 64.4683, 66.997, 71.942, 77.1627, 80.5072, 82.3834, 85.8094, 89.2355, 89.5618),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0), Vector3(0, -1.38731, 0), Vector3(0, -1.38731, 0), Vector3(0, -1.38731, 0), Vector3(0, -1.38731, 0), Vector3(0, -0.777946, 0), Vector3(0, -1.51346, 0), Vector3(0, -1.51346, 0), Vector3(0, -1.51346, 0), Vector3(0, -1.51346, 0), Vector3(0, -1.51346, 0), Vector3(0, -0.439823, 0), Vector3(0, -0.439823, 0), Vector3(0, -0.439823, 0), Vector3(0, -0.439823, 0), Vector3(0, -1.53065, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton_Warrior2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(688.275, 87.3504, -1909.26), Vector3(618.829, 87.3504, -1909.26), Vector3(561.287, 87.3517, -1904.63), Vector3(281.577, 180.928, -1809.58), Vector3(280.512, 180.928, -1814.1), Vector3(201.684, 180.928, -1813.96)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton_Warrior2:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0), Vector3(0, -1.72946, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton_Minion:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(695.925, 87.5005, -1910.75), Vector3(630.953, 87.4302, -1914.44), Vector3(564.434, 87.4302, -1909.14), Vector3(284.724, 181.007, -1814.08), Vector3(283.654, 181.007, -1818.59), Vector3(204.49, 181.007, -1817.25)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton_Minion:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton_Minion2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(693.15, 87.5005, -1906.85), Vector3(625.461, 87.1813, -1911.67), Vector3(565.037, 87.1813, -1906.7), Vector3(285.327, 180.758, -1811.64), Vector3(284.244, 180.758, -1816.11), Vector3(204.107, 180.758, -1811.64)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton_Minion2:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton_Minion3:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(694.187, 87.5005, -1915.34), Vector3(624.6, 87.5005, -1917.78), Vector3(564.938, 87.5005, -1912.8), Vector3(285.228, 181.077, -1817.75), Vector3(284.14, 181.077, -1822.27), Vector3(203.682, 181.077, -1822.03)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton_Minion3:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(29.3989, 34.8962, 39.968, 40.3148, 40.3524, 43.134),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.71191, 0), Vector3(0, -1.71191, 0), Vector3(0, -1.48868, 0), Vector3(0, -1.48868, 0), Vector3(0, -1.48868, 0), Vector3(0, -1.48868, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Knight_cinematic:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 50.0001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Knight_cinematic_backwards:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(43.7043, 46.7537),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(162.278, 181.215, -1808.3), Vector3(158.682, 181.215, -1808.3)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Knight_cinematic_backwards:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.716667, 42.6067, 49.1325),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Knight_running:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(48.9694, 57.95, 63.1631, 64.5499, 67.3233, 71.7789, 76.5917, 77.0811, 78.631, 80.0167, 85.8094, 92.9063, 96.3324, 98.2833, 107.317),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(161.254, 180.902, -1811.51), Vector3(132.3, 180.902, -1736.54), Vector3(85.2826, 180.902, -1719.8), Vector3(80.1848, 180.902, -1719.8), Vector3(71.5288, 191.655, -1719.8), Vector3(63.4022, 201.122, -1719.8), Vector3(54.8609, 201.122, -1719.8), Vector3(54.8609, 201.122, -1715.35), Vector3(46.6084, 201.122, -1711.86), Vector3(46.6084, 216.513, -1705.08), Vector3(41.6054, 222.825, -1702.56), Vector3(24.0892, 222.825, -1702.56), Vector3(12.2678, 203.516, -1702.56), Vector3(12.2678, 167.24, -1702.56), Vector3(-4.52541, -17.3939, -1702.56)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Knight_running:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(48.9694, 57.8667, 63.1631, 64.5499, 71.7789, 77.0811, 78.631, 80.1, 85.8094, 92.9063, 96.3324, 98.2833, 107.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.593412, 0), Vector3(0, -1.40497, 0), Vector3(0, -1.40497, 0), Vector3(0, -1.40497, 0), Vector3(0, 0, 0), Vector3(0, -0.200713, 0), Vector3(0, -0.200713, 0), Vector3(0, -1.29154, 0), Vector3(0.603884, -1.29154, 0), Vector3(0.935496, -1.29154, 0), Vector3(1.3282, -1.29154, 0), Vector3(1.3282, -1.29154, 0)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Knight_running:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.28333, 49.3773),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="Animation" id="Animation_hy6ql"]
 length = 3.0
 tracks/0/type = "value"
@@ -328,119 +639,197 @@ tracks/8/keys = {
 "update": 1,
 "values": [true]
 }
-
-[sub_resource type="Animation" id="Animation_6xep8"]
-resource_name = "scene"
-length = 26.6667
-step = 0.0166667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CameraSettings/Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0878, 21.2737, 21.2986, 24.9667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton_Warrior:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(387.514, 223.711, -1202.33), Vector3(274.55, 223.711, -1564.02), Vector3(427.502, 277.62, -1821.06), Vector3(312.329, 192.825, -1817.93), Vector3(191.529, 192.825, -1817.93), Vector3(155.952, 224.118, -1852.12), Vector3(127.161, 218.068, -1852.93), Vector3(83.7632, 271.314, -1818.69), Vector3(135.459, 187.423, -1847.81)]
+"values": [Vector3(618.333, 87.3504, -1920.68)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CameraSettings/Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0878, 21.2737, 21.2986, 24.9667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton_Warrior:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.233874, 0.36357, 5.73828e-09), Vector3(-0.233874, 0.536654, 2.90938e-10), Vector3(-0.233874, 1.58408, 6.21315e-09), Vector3(-0.233874, 1.58408, 6.21315e-09), Vector3(0.165912, 1.5839, 0.00524205), Vector3(-0.019147, 1.58372, 0.00283089), Vector3(-0.0279253, 1.58301, 0.00349066), Vector3(-1.10693, -1.5566, -0.0205838), Vector3(-0.216421, -1.30202, -0.010472)]
+"values": [Vector3(0, -1.72946, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CameraSettings/Camera3D:fov")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.599999, 9.43333, 9.45, 13.083, 16.0444, 16.0837, 16.0878, 21.2737, 21.2986, 25.0167),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton_Warrior2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [75.0, 69.6, 75.0, 75.0, 88.6, 75.0, 75.0, 84.0, 75.0, 84.9]
+"values": [Vector3(618.829, 87.3504, -1909.26)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label:theme_override_colors/font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(2.08333, 3.85, 9.2, 10.2667, 12.0333, 15.8833),
-"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton_Warrior2:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(1, 0.843137, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(1, 0.21268, 0.159696, 1), Color(0, 0, 0, 0)]
+"values": [Vector3(0, -1.72946, 0)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:theme_override_colors/font_shadow_color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(2.08333, 3.88333, 9.15, 10.2667, 12.0667, 15.8833),
-"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton_Minion:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+"values": [Vector3(630.953, 87.4302, -1914.44)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label:theme_override_colors/font_outline_color")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(2.08333, 3.93333, 9.15, 10.2667, 12.1167, 15.8833),
-"transitions": PackedFloat32Array(1, 15, 1, 1, 15, 1),
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton_Minion:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+"values": [Vector3(0, -1.71191, 0)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Label:text")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(1.5, 9.98333),
-"transitions": PackedFloat32Array(1, 1),
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton_Minion2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(625.461, 87.1813, -1907.87)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton_Minion2:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.71191, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton_Minion3:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(624.6, 87.5005, -1917.78)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton_Minion3:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.71191, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Knight_cinematic_backwards:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(158.682, 181.215, -1808.3)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Knight_running:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(132.3, 180.902, -1736.54)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Knight_running:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.593412, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Knight_cinematic_backwards:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["In a distant and fictional kingdom, 
-the people gathered to celebrate the princess’s birthday...", "..but then, something unexpected changed everything."]
+"values": [true]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("ColorRect:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 4.63333),
-"transitions": PackedFloat32Array(1, 16),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Label:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1.50917),
-"transitions": PackedFloat32Array(1, 1),
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Knight_running:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, true]
+"values": [true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Knight_cinematic:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6hi2w"]
@@ -1419,7 +1808,7 @@ transform = Transform3D(0.424243, 0, 0.0253607, 0, 0.425, 0, -0.0253607, 0, 0.42
 script = ExtResource("15_h16jr")
 
 [node name="Camera3D" type="Camera3D" parent="CameraSettings"]
-transform = Transform3D(0.740687, -0.1557, 0.653559, -6.52899e-09, 0.972776, 0.231748, -0.67185, -0.171653, 0.720523, 355.896, 247.688, -1596.15)
+transform = Transform3D(0.740688, -0.1557, 0.653559, -6.52899e-09, 0.972776, 0.231748, -0.671849, -0.171653, 0.720523, 355.896, 247.688, -1596.15)
 near = 0.428
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraSettings"]
@@ -1457,13 +1846,33 @@ text = "..but then, something unexpected changed everything."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Barbarian3" parent="." instance=ExtResource("12_r500t")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 171.334, 180.934, -1825.01)
-script = null
-
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1164.0
 offset_bottom = 655.0
 color = Color(0, 0, 0, 0)
+
+[node name="Rogue_Hooded" parent="." instance=ExtResource("17_lbtgp")]
+transform = Transform3D(-0.433936, 0, -1.95236, 0, 2, 0, 1.95236, 0, -0.433936, 154.719, 181.214, -1843.21)
+
+[node name="Skeleton_Minion" parent="." instance=ExtResource("18_hnlo7")]
+transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 630.953, 87.4302, -1914.44)
+
+[node name="Skeleton_Minion2" parent="." instance=ExtResource("18_hnlo7")]
+transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 625.461, 87.1813, -1907.87)
+
+[node name="Skeleton_Minion3" parent="." instance=ExtResource("18_hnlo7")]
+transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 624.6, 87.5005, -1917.78)
+
+[node name="Skeleton_Warrior" parent="." instance=ExtResource("19_iw5h0")]
+transform = Transform3D(-0.347597, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347597, 618.333, 87.3504, -1920.68)
+
+[node name="Skeleton_Warrior2" parent="." instance=ExtResource("19_iw5h0")]
+transform = Transform3D(-0.347597, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347597, 618.829, 87.3504, -1909.26)
+
+[node name="Knight_cinematic_backwards" parent="." instance=ExtResource("20_iw5h0")]
+transform = Transform3D(-0.300324, 0, 2.1794, 0, 2.2, 0, -2.1794, 0, -0.300324, 158.682, 181.215, -1808.3)
+
+[node name="Knight_running" parent="." instance=ExtResource("21_uvhtu")]
+transform = Transform3D(1.82388, 0, -1.23022, 0, 2.2, 0, 1.23022, 0, 1.82388, 132.3, 180.902, -1736.54)
 
 [connection signal="animation_finished" from="CameraSettings/AnimationPlayer" to="CameraSettings" method="_on_animation_player_animation_finished"]

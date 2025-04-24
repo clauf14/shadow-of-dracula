@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://chol2xlfbq7cu"]
+[gd_scene load_steps=27 format=3 uid="uid://chol2xlfbq7cu"]
 
 [ext_resource type="Script" uid="uid://db0n3w40v44mh" path="res://demo/src/DemoScene.gd" id="1_k7qca"]
 [ext_resource type="PackedScene" uid="uid://d2jihfohphuue" path="res://demo/components/UI.tscn" id="2_nqak5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bwwihbso5wrk3" path="res://Models/Forest/willow.glb" id="10_6iel4"]
 [ext_resource type="PackedScene" uid="uid://cmvkfchtis3sx" path="res://Models/Forest/daisies.glb" id="11_fg47j"]
 [ext_resource type="PackedScene" uid="uid://uuyaulm8t274" path="res://psx_modular_castle.tscn" id="12_47hv7"]
+[ext_resource type="FontFile" uid="uid://bwyo2j22ormdr" path="res://Font/OldLondon.ttf" id="12_nk7oj"]
 [ext_resource type="PackedScene" uid="uid://dfqxlc72yruln" path="res://PauseMenu/pause_menu.tscn" id="13_81b0d"]
 [ext_resource type="PackedScene" uid="uid://ccyngebgch5oh" path="res://Characters/knight.tscn" id="13_fnops"]
 [ext_resource type="PackedScene" uid="uid://qtgj25c82k1e" path="res://Characters/rogue.tscn" id="14_88s2h"]
@@ -1178,6 +1179,7 @@ render_priority = 3
 outline_render_priority = 1
 text = "Congratulations! You saved the princess!
 "
+font = ExtResource("12_nk7oj")
 font_size = 70
 uppercase = true
 
@@ -1185,7 +1187,7 @@ uppercase = true
 transform = Transform3D(-0.42478, 0, 0.0136833, 0, 0.425, 0, -0.0136833, 0, -0.42478, -35.027, 4.23212, -37.3755)
 
 [node name="Knight" parent="." instance=ExtResource("13_fnops")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 171.111, 181.185, -1812.22)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.4393, -9.15248, -166.898)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

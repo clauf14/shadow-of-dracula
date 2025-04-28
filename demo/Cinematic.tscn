@@ -1855,19 +1855,19 @@ color = Color(0, 0, 0, 0)
 transform = Transform3D(-0.433936, 0, -1.95236, 0, 2, 0, 1.95236, 0, -0.433936, 154.719, 181.214, -1843.21)
 
 [node name="Skeleton_Minion" parent="." instance=ExtResource("18_hnlo7")]
-transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 630.953, 87.4302, -1914.44)
+transform = Transform3D(-0.281292, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281292, 630.953, 87.4302, -1914.44)
 
 [node name="Skeleton_Minion2" parent="." instance=ExtResource("18_hnlo7")]
-transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 625.461, 87.1813, -1907.87)
+transform = Transform3D(-0.281292, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281292, 625.461, 87.1813, -1907.87)
 
 [node name="Skeleton_Minion3" parent="." instance=ExtResource("18_hnlo7")]
-transform = Transform3D(-0.281291, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281291, 624.6, 87.5005, -1917.78)
+transform = Transform3D(-0.281292, 0, -1.98012, 0, 2, 0, 1.98012, 0, -0.281292, 624.6, 87.5005, -1917.78)
 
 [node name="Skeleton_Warrior" parent="." instance=ExtResource("19_iw5h0")]
-transform = Transform3D(-0.347597, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347597, 618.333, 87.3504, -1920.68)
+transform = Transform3D(-0.347596, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347596, 618.333, 87.3504, -1920.68)
 
 [node name="Skeleton_Warrior2" parent="." instance=ExtResource("19_iw5h0")]
-transform = Transform3D(-0.347597, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347597, 618.829, 87.3504, -1909.26)
+transform = Transform3D(-0.347596, 0, -2.17236, 0, 2.2, 0, 2.17236, 0, -0.347596, 618.829, 87.3504, -1909.26)
 
 [node name="Knight_cinematic_backwards" parent="." instance=ExtResource("20_iw5h0")]
 transform = Transform3D(-0.300324, 0, 2.1794, 0, 2.2, 0, -2.1794, 0, -0.300324, 158.682, 181.215, -1808.3)

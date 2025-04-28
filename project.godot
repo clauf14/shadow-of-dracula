@@ -15,6 +15,10 @@ run/main_scene="uid://qx75nh8o2dei"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [input]
 
 move_forwards={

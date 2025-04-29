@@ -16,18 +16,18 @@ func _process(p_delta) -> void:
 		$Label.text += "Position: %.1v\n" % player.global_position if player else ""
 		$Label.text += """
 			Player
-			Move: WASDEQ,Space,Mouse
-			Move speed: Wheel,+/-,Shift
-			Camera View: V
-			Gravity toggle: G
-			Collision toggle: C
+			Front: W
+			Back: S
+			Right: D
+			Left: A
+			Sprint: W,A,S + Shift
+			Attack: Right Click
 
 			Window
 			Quit: F8
 			UI toggle: F9
 			Render mode: F10
-			Full screen: F11
-			Mouse toggle: Escape / F12
+			Pause: Escape
 			"""
 
 

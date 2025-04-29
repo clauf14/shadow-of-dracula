@@ -10,7 +10,7 @@ extends CharacterBody3D
 var last_attack_time: int = 0
 
 # Stats for the enemy
-var curHp: int = 10
+var curHp: int = 15
 var damage: int = 1
 var is_attacking: bool = false
 var is_player_in_range: bool = false

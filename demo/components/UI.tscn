@@ -26,18 +26,18 @@ Position: (100, 100, 100)
 Move Speed: 10
 
 Player
-Move: WASDEQ,Space,Mouse
-Move speed: Wheel,+/-,Shift
-Camera view: V
-Gravity toggle: G
-Collision toggle: C
+Front: W
+Back: S
+Right: D
+Left: A
+Sprint: W,A,S + Shift
+Attack: Right Click
 
 Window
 Quit: F8
 UI toggle: F9
 Render mode: F10
-Full screen: F11
-Mouse toggle: Escape
+Pause: Escape
 "
 
 [node name="Panel" type="Panel" parent="Label"]
@@ -53,9 +53,9 @@ offset_bottom = 444.0
 top_level = true
 layout_mode = 0
 offset_left = 6.0
-offset_top = 129.0
-offset_right = 246.0
-offset_bottom = 138.0
+offset_top = 102.0
+offset_right = 248.0
+offset_bottom = 111.0
 
 [node name="HSeparator2" type="HSeparator" parent="Label/Panel"]
 top_level = true

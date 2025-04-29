@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw6uu7ynsf1u8"]
+
+[ext_resource type="FontFile" uid="uid://bwyo2j22ormdr" path="res://Font/OldLondon.ttf" id="1_ukuwm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 654.0
+color = Color(0.0941176, 0.0941176, 0.0941176, 0.709804)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 101.0
+offset_right = 1019.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ukuwm")
+theme_override_font_sizes/font_size = 50
+text = "Congratulations!
+You saved the entire kingdom!
+
+Game created by
+Furțea Claudiu, Coman Matei & Voinescu Denis"
+horizontal_alignment = 1
+vertical_alignment = 1

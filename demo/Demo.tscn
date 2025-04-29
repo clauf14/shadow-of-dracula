@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://chol2xlfbq7cu"]
+[gd_scene load_steps=29 format=3 uid="uid://chol2xlfbq7cu"]
 
 [ext_resource type="Script" uid="uid://db0n3w40v44mh" path="res://demo/src/DemoScene.gd" id="1_k7qca"]
 [ext_resource type="PackedScene" uid="uid://d2jihfohphuue" path="res://demo/components/UI.tscn" id="2_nqak5"]
@@ -217,6 +217,9 @@ radius = 0.0398111
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_322ls"]
 height = 12.4288
 radius = 0.313943
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_88s2h"]
+size = Vector3(1.60886, 4.11069, 1.17603)
 
 [node name="Demo" type="Node"]
 script = ExtResource("1_k7qca")
@@ -1175,6 +1178,7 @@ transform = Transform3D(-2.91774e-07, 0, 6.675, 0, 6.675, 0, -6.675, 0, -2.91774
 
 [node name="Label" type="Label3D" parent="PSX_Modular_Castle2"]
 transform = Transform3D(-0.448902, 0, -0.021955, 0, 0.449438, 0, 0.021955, 0, -0.448902, -35.0915, 5.70471, -38.6548)
+visible = false
 billboard = 1
 render_priority = 3
 outline_render_priority = 1
@@ -1187,8 +1191,16 @@ uppercase = true
 [node name="Rogue" parent="PSX_Modular_Castle2" instance=ExtResource("14_88s2h")]
 transform = Transform3D(-0.42478, 0, 0.0136833, 0, 0.425, 0, -0.0136833, 0, -0.42478, -35.027, 4.23212, -37.3755)
 
+[node name="WinZone" type="Area3D" parent="PSX_Modular_Castle2/Rogue"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PSX_Modular_Castle2/Rogue/WinZone"]
+transform = Transform3D(1, 0, 0, 0, 0.999993, 0, 0, 0, 1, -0.0106812, 2.10512, 0.0880146)
+shape = SubResource("BoxShape3D_88s2h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PSX_Modular_Castle2/Rogue/WinZone/CollisionShape3D"]
+
 [node name="Knight" parent="." instance=ExtResource("13_fnops")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.4393, -9.15248, -166.898)
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 76.4393, -9.15248, -166.898)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1256,3 +1268,5 @@ transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325
 
 [node name="Enemy21" parent="." instance=ExtResource("16_88s2h")]
 transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325652, -1.36894, -0.287551, -1.5663, 277.528, 181.008, -1805.42)
+
+[connection signal="body_entered" from="PSX_Modular_Castle2/Rogue/WinZone" to="Knight" method="_on_win_zone_body_entered"]

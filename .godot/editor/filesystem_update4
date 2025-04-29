@@ -1,15 +1,8 @@
-res://UI/UI.tscn
 res://demo/data/assets.tres
-res://Characters/knight.tscn
-res://Characters/knight.gd
 res://demo/Demo.tscn
 res://PauseMenu/pause_menu.tscn
-res://HomeScene/HomeScene.tscn
 res://LoadGameScene/LoadGameScene.tscn
 res://demo/components/DemoBase.tscn
-res://demo/components/Player.tscn
-res://Player/Player.tscn
-res://UI/UI.gd
 res://Characters/enemy.tscn
-res://Characters/enemy.gd
-res://demo/components/Enemy.tscn
+res://Characters/knight.tscn
+res://PauseMenu/pause_menu.gd

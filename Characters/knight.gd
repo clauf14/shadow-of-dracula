@@ -6,7 +6,7 @@ extends CharacterBody3D
 # stats
 var curHp : int = 10
 var maxHp : int = 10
-var damage : int = 1
+var damage : int = 5
 @onready var ui = $CanvasLayer/UIPlayer as Control
 
 @export var first_person: bool = false : 
@@ -165,14 +165,19 @@ func try_attack(name: String, damage: int) -> void:
 
 	lastAttackTime = Time.get_ticks_msec()
 	is_attacking = true
-
 	play_anim("1H_Melee_Attack_Slice_Diagonal")
 
-	# Check all nearby nodes (simple range check)
+	# damage logic...
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body and body.get_name() == name and body.has_method("take_damage"):
 			body.take_damage(damage)
+
+	# Reset attacking state after short delay, even if animation breaks
+	var tree = get_tree()
+	if tree:
+		await tree.create_timer(attackRate).timeout
+	is_attacking = false
 
 func get_overlapping_bodies() -> Array:
 	var space_state = get_world_3d().direct_space_state
@@ -190,6 +195,8 @@ func get_overlapping_bodies() -> Array:
 
 # called when an enemy deals damage to us
 func take_damage(damageToTake: int) -> void:
+	if is_attacking:
+		return 
 	curHp -= damageToTake
 	ui.update_health_bar(curHp, maxHp)
 	if curHp <= 0:

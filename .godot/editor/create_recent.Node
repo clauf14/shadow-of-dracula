@@ -1,4 +1,8 @@
 CollisionShape3D
+Area3D
+MeshInstance3D
+BoneAttachment3D
+Timer
 CharacterBody3D
 Button
 ColorRect
@@ -6,9 +10,5 @@ Label
 Node3D
 Label3D
 Control
-Area3D
 Area2D
-MeshInstance3D
 CanvasLayer
-PanelContainer
-StaticBody3D

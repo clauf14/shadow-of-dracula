@@ -12,19 +12,30 @@ func _ready():
 				if Global.save_data.has(Global.load_slot):
 					var knight_instance = get_node_or_null("Knight")
 					if knight_instance:
-						var slot_data = Global.save_data[Global.load_slot]["position"]
-						knight_instance.global_transform.origin = Vector3(
-							slot_data.x,
-							slot_data.y,
-							slot_data.z
-					)
-					print("✅ The knight's position has been applied from slot: ", Global.load_slot)
+						var slot_data = Global.save_data[Global.load_slot]
+						
+						if slot_data.has("position"):
+							var position = slot_data["position"]
+							knight_instance.global_transform.origin = Vector3(position.x, position.y, position.z)
+						
+						if slot_data.has("health"):
+							knight_instance.curHp = float(slot_data["health"])
+							if knight_instance.has_node("CanvasLayer/UIPlayer"):
+								var ui = knight_instance.get_node("CanvasLayer/UIPlayer")
+								if ui:
+									ui.update_health_bar(knight_instance.curHp, knight_instance.maxHp)
+	
+						else:
+							print("Health data is missing in the save slot!")
+
+					else:
+						print("⚠️ The knight was not found!")
 				else:
-					print("⚠️ The knight was not found!")
+					print("Slot ", Global.load_slot, " not found in save data!")
 			else:
-				print("⚠️ Slot ", Global.load_slot, " not found in save data!")
+				print("⚠No load_slot found in Global save data!")
 		else:
-			print("⚠️ No save data or no load_slot found in Global!")
+			print("⚠No save data found in Global!")
 
 
 	if Engine.is_editor_hint() and has_node("Environment") and \

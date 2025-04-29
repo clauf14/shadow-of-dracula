@@ -1195,4 +1195,64 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 76.4393, -9.15248, -166.898)
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_81b0d")]
 
 [node name="Enemy" parent="." instance=ExtResource("16_88s2h")]
-transform = Transform3D(-2.0712, 0, 0.3466, 0, 2.1, 0, -0.3466, 0, -2.0712, 75.5066, -5.42795, -129.536)
+transform = Transform3D(-2.09884, 0, -0.0696627, 0, 2.1, 0, 0.0696627, 0, -2.09884, 70.9233, 2.39573, 125.181)
+
+[node name="Enemy2" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-2.09884, 0, -0.0696627, 0, 2.1, 0, 0.0696627, 0, -2.09884, 72.6724, -0.459831, -34.9228)
+
+[node name="Enemy3" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.26196, 0, -1.67852, 0, 2.1, 0, 1.67852, 0, -1.26196, 164.96, 38.6516, 195.374)
+
+[node name="Enemy4" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-0.98909, 0, -1.85248, 0, 2.1, 0, 1.85248, 0, -0.98909, 173.923, 42.3957, 212.181)
+
+[node name="Enemy5" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.26196, 0, -1.67852, 0, 2.1, 0, 1.67852, 0, -1.26196, 331.96, 102.652, 402.374)
+
+[node name="Enemy6" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.84204, 0, 1.0084, 0, 2.1, 0, -1.0084, 0, -1.84204, 301.556, 103.122, 402.524)
+
+[node name="Enemy7" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.85338, 0, -0.98741, 0, 2.1, 0, 0.98741, 0, 1.85338, 815.131, 104.785, 405.254)
+
+[node name="Enemy8" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.50313, 0, 1.46649, 0, 2.1, 0, -1.46649, 0, 1.50313, 772.677, 104.213, 413.773)
+
+[node name="Enemy9" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-2.089, 0.157517, -0.145806, 0.172566, 2.08083, -0.224456, 0.127639, -0.235262, -2.08287, 359.684, 74.4414, -378.15)
+
+[node name="Enemy10" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.90002, 0, -0.89437, 0, 2.1, 0, 0.89437, 0, -1.90002, 314.875, 105.601, 414.132)
+
+[node name="Enemy11" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(0.167953, 0.311312, -2.06999, 0.133651, 2.07081, 0.322279, 2.089, -0.157517, 0.145806, 530.684, 79.4414, -738.579)
+
+[node name="Enemy12" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(0.167953, 0.311312, -2.06999, 0.133651, 2.07081, 0.322279, 2.089, -0.157517, 0.145806, 537.204, 79.7078, -725.503)
+
+[node name="Enemy13" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(0.837607, 0.243239, -1.9103, 0.00892995, 2.08267, 0.269102, 1.9257, -0.115458, 0.829659, 523.684, 79.5089, -751.15)
+
+[node name="Enemy14" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.59591, 0.10875, -1.3606, 0.133651, 2.07081, 0.322279, 1.35838, -0.331512, 1.56681, 513.369, 79.5427, -768.601)
+
+[node name="Enemy15" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.85215, 0.0343954, -0.989107, 0.133651, 2.07081, 0.322279, 0.980638, -0.347194, 1.82422, 502.602, 79.5805, -781.056)
+
+[node name="Enemy16" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.59591, 0.10875, -1.3606, 0.133651, 2.07081, 0.322279, 1.35838, -0.331512, 1.56681, 613.316, 87.748, -1510.66)
+
+[node name="Enemy17" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(1.59591, 0.10875, -1.3606, 0.0277804, 2.0903, 0.199657, 1.36466, -0.16973, 1.5871, 602.144, 87.8424, -1516.4)
+
+[node name="Enemy18" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325652, -1.36894, -0.287551, -1.5663, 273.316, 180.748, -1816.66)
+
+[node name="Enemy19" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325652, -1.36894, -0.287551, -1.5663, 285.048, 179.521, -1818.13)
+
+[node name="Enemy20" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325652, -1.36894, -0.287551, -1.5663, 274.003, 180.136, -1829.82)
+
+[node name="Enemy21" parent="." instance=ExtResource("16_88s2h")]
+transform = Transform3D(-1.59123, 0.165315, 1.36038, -0.0629746, 2.07364, -0.325652, -1.36894, -0.287551, -1.5663, 277.528, 181.008, -1805.42)

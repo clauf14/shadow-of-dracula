@@ -1,8 +1,9 @@
+CollisionShape3D
+CharacterBody3D
 Button
 ColorRect
 Label
 Node3D
-CollisionShape3D
 Label3D
 Control
 Area3D
@@ -10,5 +11,4 @@ Area2D
 MeshInstance3D
 CanvasLayer
 PanelContainer
-CharacterBody3D
 StaticBody3D

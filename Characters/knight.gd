@@ -2,6 +2,13 @@ extends CharacterBody3D
 
 @export var MOVE_SPEED: float = 20.0
 @export var JUMP_SPEED: float = 30.0
+
+# stats
+var curHp : int = 10
+var maxHp : int = 10
+var damage : int = 1
+@onready var ui = $CanvasLayer/UIPlayer as Control
+
 @export var first_person: bool = false : 
 	set(p_value):
 		first_person = p_value
@@ -31,7 +38,12 @@ var is_attacking: bool = false
 var is_blocking: bool = false
 var is_jumping: bool = false
 
+# attack-related
+var attackRate: float = 0.3
+var lastAttackTime: int = 0
+
 func _ready() -> void:
+	ui.update_health_bar(curHp, maxHp)
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
 
 func play_anim(anim_name: String) -> void:
@@ -113,8 +125,7 @@ func _input(p_event: InputEvent) -> void:
 		match p_event.button_index:
 			MOUSE_BUTTON_LEFT:
 				if not is_attacking and not is_interacting:
-					is_attacking = true
-					play_anim("1H_Melee_Attack_Slice_Horizontal")
+					try_attack("Enemy", damage)
 			MOUSE_BUTTON_RIGHT:
 				if not is_blocking and not is_interacting:
 					is_blocking = true
@@ -140,9 +151,50 @@ func _input(p_event: InputEvent) -> void:
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "Interact":
 		is_interacting = false
-	elif anim_name == "1H_Melee_Attack_Slice_Horizontal":
+	elif anim_name == "1H_Melee_Attack_Slice_Diagonal":
 		is_attacking = false
 	elif anim_name == "Block":
 		is_blocking = false
 	elif anim_name == "Jump_Full_Short":
 		is_jumping = false
+
+# called when we press the attack button
+func try_attack(name: String, damage: int) -> void:
+	if Time.get_ticks_msec() - lastAttackTime < attackRate * 1000:
+		return
+
+	lastAttackTime = Time.get_ticks_msec()
+	is_attacking = true
+
+	play_anim("1H_Melee_Attack_Slice_Diagonal")
+
+	# Check all nearby nodes (simple range check)
+	var bodies = get_overlapping_bodies()
+	for body in bodies:
+		if body and body.get_name() == name and body.has_method("take_damage"):
+			body.take_damage(damage)
+
+func get_overlapping_bodies() -> Array:
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsShapeQueryParameters3D.new()
+	query.shape = $CollisionShape3D.shape
+	query.transform = global_transform
+	query.margin = 1.5
+	query.collide_with_bodies = true
+	
+	var result = space_state.intersect_shape(query)
+	var colliders = []
+	for item in result:
+		colliders.append(item.collider)
+	return colliders
+
+# called when an enemy deals damage to us
+func take_damage(damageToTake: int) -> void:
+	curHp -= damageToTake
+	ui.update_health_bar(curHp, maxHp)
+	if curHp <= 0:
+		die()
+
+# called when our health reaches 0
+func die() -> void:
+	get_tree().reload_current_scene()

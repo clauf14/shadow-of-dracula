@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dbyouqsfv4y7t"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_3oog1"]
-[ext_resource type="Script" path="res://Scripts/CameraOrbit.gd" id="2_vfoy6"]
+[ext_resource type="Script" uid="uid://pw7kndeq4l16" path="res://Player/Player.gd" id="1_3oog1"]
+[ext_resource type="Script" uid="uid://ctecquqsb7yyi" path="res://Scripts/CameraOrbit.gd" id="2_vfoy6"]
 [ext_resource type="PackedScene" uid="uid://c2qyco34jpab3" path="res://Weapon/Weapon.tscn" id="3_orjtd"]
 [ext_resource type="PackedScene" uid="uid://j8jmeraklc2f" path="res://UI/UI.tscn" id="4_lpw5w"]
 

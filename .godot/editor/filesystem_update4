@@ -1,0 +1,17 @@
+res://demo/data/assets1.tres
+res://demo/Cinematic.tscn
+res://demo/data/assets.tres
+res://demo/cinematic.gd
+res://demo/Demo.tscn
+res://PauseMenu/pause_menu.tscn
+res://LoadGameScene/LoadGameScene.tscn
+res://demo/components/DemoBase.tscn
+res://Characters/enemy.tscn
+res://Characters/knight.tscn
+res://HomeScene/HomeScene.tscn
+res://demo/components/UI.tscn
+res://UI/UI.tscn
+res://GameOver.tscn
+res://psx_modular_castle.tscn
+res://Characters/rogue.tscn
+res://FinishedGameScene.tscn

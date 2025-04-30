@@ -1,5 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://dbao41hvsmpeu"]
+[gd_scene load_steps=37 format=3 uid="uid://dbao41hvsmpeu"]
 
+[ext_resource type="Script" uid="uid://sb1jvmgwvtgj" path="res://demo/cinematic.gd" id="1_4xu5a"]
 [ext_resource type="PackedScene" uid="uid://bb2lp50sjndus" path="res://demo/components/Environment.tscn" id="3_oypso"]
 [ext_resource type="PackedScene" uid="uid://dwnhqfjq7v1pq" path="res://demo/components/Borders.tscn" id="4_lbtgp"]
 [ext_resource type="Terrain3DAssets" uid="uid://g7tcinjjp0sp" path="res://demo/data/assets1.tres" id="4_tbbqo"]
@@ -839,6 +840,7 @@ _data = {
 }
 
 [node name="Demo" type="Node"]
+script = ExtResource("1_4xu5a")
 
 [node name="Environment" parent="." instance=ExtResource("3_oypso")]
 
@@ -1874,5 +1876,17 @@ transform = Transform3D(-0.300324, 0, 2.1794, 0, 2.2, 0, -2.1794, 0, -0.300324, 
 
 [node name="Knight_running" parent="." instance=ExtResource("21_uvhtu")]
 transform = Transform3D(1.82388, 0, -1.23022, 0, 2.2, 0, 1.23022, 0, 1.82388, 132.3, 180.902, -1736.54)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 920.0
+offset_top = 604.0
+offset_right = 1124.0
+offset_bottom = 630.0
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.0235294)
+theme_override_fonts/font = ExtResource("16_oypso")
+theme_override_font_sizes/font_size = 31
+text = "Press space to skip"
 
 [connection signal="animation_finished" from="CameraSettings/AnimationPlayer" to="CameraSettings" method="_on_animation_player_animation_finished"]

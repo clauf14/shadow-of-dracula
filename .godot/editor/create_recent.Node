@@ -1,7 +1,7 @@
+Label
 MeshInstance3D
 CollisionShape3D
 Area3D
-Label
 ColorRect
 CanvasLayer
 BoneAttachment3D
